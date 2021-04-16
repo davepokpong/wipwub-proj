@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n, l, h, aj, ai, x, y, mush = 0;
+    map<int, int> garden;
+    scanf("%d %d %d", &n, &l, &h);
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &ai);
+        mush += ai;
+        for (int j = 0; j < ai; j++)
+        {
+            scanf("%d", &aj);
+            map<int, int>::iterator a = garden.find(aj);
+            //printf("complete1\n");
+            if (a == garden.end())
+            {
+                garden.insert(pair<int, int>(aj, 1));
+            }
+            else
+            {
+                int num = a->second;
+                num++;
+               a = garden.erase(a);
+               garden.insert(pair<int, int>(aj, num));
+            }
+        }
+        scanf("%d %d", &x, &y);
+        //printf("complete2\n");
+        x = l+x;
+        printf("x is %d\n", x);
+        map<int, int>::iterator upper = garden.upper_bound(x), e = garden.end();
+        
+        printf("upper is %d\n", upper->first);
+        advance(e,1);
+        for (auto k = upper; k != garden.end(); k++)
+        {
+            printf("Mush = %d and k = %d\n", mush, k->first);
+           
+            mush -= k->second;
+            k = garden.erase(k);
+        }
+        printf("%d\n", mush);
+    }
+}
