@@ -8,11 +8,20 @@
 
 <body>
 
-    <form id="submitform" action="/uploadmultiple" enctype="multipart/form-data" method="POST">
-        <input type="file" name="myFiles" multiple>
-        <input type="submit" value="Upload your files" />
-    </form>
+    <p id="currentName">Song</p>
+
+    <div style="border: 2px solid black; overflow: auto; width: 450px; height: auto;">
+        <p style="text-align: center;">Playlist</p>
+        <p id="queueSong"">No song in queue.</p>
+    </div>
 
 </body>
 
+<script>
+    fetch("http://localhost:3000/filename")
+    .then(response => response.json())
+    .then(function(data){
+        console.log(data)
+    })
+</script>
 </html>

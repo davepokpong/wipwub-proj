@@ -7,28 +7,10 @@
 </head>
 
 <body>
-    <!--  SINGLE FILE -->
-    <!-- <form action="/uploadfile" enctype="multipart/form-data" method="POST">
-        <input type="file" name="myFile" />
-        <input type="submit" value="Upload a file" />
-    </form> -->
-    <!-- MULTIPLE FILES -->
     <form id="submitform" action="/uploadmultiple" enctype="multipart/form-data" method="POST">
         <input type="file" name="myFiles" multiple>
         <input type="submit" value="Upload your files" />
     </form>
-
-    <!-- <br>
-    <input type="file" multiple>
-    <br><br>
-    <input type="submit" id="submitbtn"> -->
-
 </body>
-<!-- <script>
-    document.getElementById("submitform").addEventListener("submit", function (event) {
-        // alert("Submit successful !")
-        event.preventDefault()
-    });
-</script> -->
 
 </html>
