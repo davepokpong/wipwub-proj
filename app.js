@@ -8,7 +8,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/main.html');
+    // res.sendFile(__dirname + '/main.html');
+    res.sendFile(__dirname + '/submitsuccess.html');
 });
 
 app.get('/returnbtn', function (req, res) {
@@ -56,6 +57,10 @@ app.post('/uploadmultiple', upload.array('myFiles', 12), (req, res, next) => {
 
 app.get('/filename', function (req, res){
     res.send(playlist);
+});
+
+app.post('/play', (req, res) => {
+    
 });
 
 app.listen(3000, () => console.log('Server started on port 3000'));
