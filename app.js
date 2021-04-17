@@ -72,14 +72,22 @@ app.get('/play', (req, res) => {
     
     // const myShellScript = exec(`echo ${playlist[index].originalname}`);
     const myShellScript = exec(`cd uploads; mpg123 ${textname}`);
-    // myShellScript.stdout.on('data', (data)=>{
-    //     // console.log(data); 
-    // });
-    // myShellScript.stderr.on('data', (data)=>{
-    //     console.error(data);
-    // });
+    myShellScript.stdout.on('data', (data)=>{
+        console.log(data); 
+    });
+    myShellScript.stderr.on('data', (data)=>{
+        console.error(data);
+    });
     res.json({
         status: 'Playing !'
+    });
+});
+
+app.get('/pause', (req, res) => {
+    console.log("click pause");
+    const pause_script = exec(' ');
+    res.json({
+        status: 'Pause !'
     });
 });
 

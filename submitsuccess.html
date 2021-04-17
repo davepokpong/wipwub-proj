@@ -8,21 +8,29 @@
 
 <body>
 
-    <p id="currentName">Song</p>
+    <!-- <p id="currentName">Song</p> -->
 
     <div style="border: 2px solid black; overflow: auto; width: 450px; height: auto;">
-        <p style="text-align: center;">Playlist</p>
+        <h3 style="text-align: center;">Playlist</h3>
         <p id="queueSong"">No song in queue.</p>
     </div>
     <br>
     <button onclick="play()">Play</button>
+    <button onclick="pause()">Pause/Unpause</button>
 </body>
 
 <script>
-    fetch("http://localhost:3000/filename")
+    fetch("http://boncpe.local:3000/filename")
         .then(response => response.json())
         .then(function (data) {
-            console.log(data)
+            console.log(data);
+            document.getElementById("queueSong").innerHTML = "";
+            var index = 1;
+            data.forEach(ele => {
+                document.getElementById("queueSong").innerHTML += index + ' : ' + ele.originalname + "<br>";
+                index++;
+            });
+
         });
     
     function play(){
@@ -30,6 +38,14 @@
             method: "GET"
         });
     }
+
+    function pause(){
+        fetch('http://boncpe.local:3000/pause', {
+            method: "GET"
+        });
+    }
+
+    
 </script>
 
 </html>

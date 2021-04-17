@@ -4,13 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <title>TEST</title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
 <body>
     <form id="submitform" action="/uploadmultiple" enctype="multipart/form-data" method="POST">
         <input type="file" name="myFiles" multiple>
-        <input type="submit" value="Upload your files" />
+        <input type="submit" value="Upload your files" onclick="showUpload()"/>
     </form>
+    <!-- <button onclick="showUpload()">click</button> -->
+    <p style="display: none;" id="status" >Uploading</p>
 </body>
+
+<script>
+    function showUpload(){
+        var upload = document.getElementById('status');
+        upload.style.display = "block";
+    }
+</script>
 
 </html>
