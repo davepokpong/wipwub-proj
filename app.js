@@ -63,7 +63,7 @@ app.get('/filename', function (req, res){
 
 app.get('/play', (req, res) => {
     var textname;
-    console.log("HelloJa");
+    console.log("Playing!");
     playlist.forEach(namequeue => {
         textname += namequeue.filename+' ';
     });
@@ -71,12 +71,15 @@ app.get('/play', (req, res) => {
     console.log(textname);
     
     // const myShellScript = exec(`echo ${playlist[index].originalname}`);
-    const myShellScript = exec(`mpg123 ${textname}`);
-    myShellScript.stdout.on('data', (data)=>{
-        // console.log(data); 
-    });
-    myShellScript.stderr.on('data', (data)=>{
-        console.error(data);
+    const myShellScript = exec(`cd uploads; mpg123 ${textname}`);
+    // myShellScript.stdout.on('data', (data)=>{
+    //     // console.log(data); 
+    // });
+    // myShellScript.stderr.on('data', (data)=>{
+    //     console.error(data);
+    // });
+    res.json({
+        status: 'Playing !'
     });
 });
 

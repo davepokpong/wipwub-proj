@@ -24,7 +24,12 @@
         .then(function (data) {
             console.log(data)
         });
-
+    
+    function play(){
+        fetch('http://boncpe.local:3000/play', {
+            method: "GET"
+        });
+    }
 </script>
 
 </html>
