@@ -1,15 +1,17 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const multer = require('multer');
+const exec = require('child_process').exec;
 
 let playlist;
+let index=0;
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
     // res.sendFile(__dirname + '/main.html');
-    res.sendFile(__dirname + '/submitsuccess.html');
+    res.sendFile(__dirname + '/main.html');
 });
 
 app.get('/returnbtn', function (req, res) {
@@ -42,7 +44,7 @@ function clearName(namefile) {
 
 app.post('/uploadmultiple', upload.array('myFiles', 12), (req, res, next) => {
     const files = req.files
-    // console.log(files)
+    // console.log(files.length)
     if (!files) {
         const error = new Error('Please choose files')
         error.httpStatusCode = 400
@@ -59,8 +61,23 @@ app.get('/filename', function (req, res){
     res.send(playlist);
 });
 
-app.post('/play', (req, res) => {
+app.get('/play', (req, res) => {
+    var textname;
+    console.log("HelloJa");
+    playlist.forEach(namequeue => {
+        textname += namequeue.filename+' ';
+    });
+    textname = textname.slice(9);
+    console.log(textname);
     
+    // const myShellScript = exec(`echo ${playlist[index].originalname}`);
+    const myShellScript = exec(`mpg123 ${textname}`);
+    myShellScript.stdout.on('data', (data)=>{
+        // console.log(data); 
+    });
+    myShellScript.stderr.on('data', (data)=>{
+        console.error(data);
+    });
 });
 
 app.listen(3000, () => console.log('Server started on port 3000'));

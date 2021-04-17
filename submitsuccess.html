@@ -15,16 +15,16 @@
         <p id="queueSong"">No song in queue.</p>
     </div>
     <br>
-    <form action="/play" method="post">
-        <input type="button" value="Play">
-    </form>
+    <button onclick="play()">Play</button>
 </body>
 
 <script>
     fetch("http://localhost:3000/filename")
-    .then(response => response.json())
-    .then(function(data){
-        console.log(data)
-    })
+        .then(response => response.json())
+        .then(function (data) {
+            console.log(data)
+        });
+
 </script>
+
 </html>
