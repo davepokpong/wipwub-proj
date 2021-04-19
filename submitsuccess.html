@@ -16,7 +16,7 @@
     </div>
     <br>
     <button onclick="play()">Play</button>
-    <button onclick="pause()">Pause/Unpause</button>
+    <button onclick="pled()">Pause/Unpause</button>
 </body>
 
 <script>
@@ -39,8 +39,8 @@
         });
     }
 
-    function pause(){
-        fetch('http://boncpe.local:3000/pause', {
+    function led_ctl(){
+        fetch('http://boncpe.local:3000/playled', {
             method: "GET"
         });
     }

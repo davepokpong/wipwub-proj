@@ -79,8 +79,16 @@ app.get('/play', (req, res) => {
         console.error(data);
     });
     res.json({
-        status: 'Playing !'
+        status: 'playing'
     });
+});
+
+app.get('/playled', (req, res) => {
+    res.json({led_status: 1});
+});
+
+app.get('/stopled', (req, res) => {
+    res.json({led_status: 0});
 });
 
 app.get('/pause', (req, res) => {
