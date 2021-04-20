@@ -16,7 +16,8 @@
     </div>
     <br>
     <button onclick="play()">Play</button>
-    <button onclick="pled()">Pause/Unpause</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="backhome()">Go back</button>
 </body>
 
 <script>
@@ -30,11 +31,22 @@
                 document.getElementById("queueSong").innerHTML += index + ' : ' + ele.originalname + "<br>";
                 index++;
             });
-
         });
     
     function play(){
         fetch('http://boncpe.local:3000/play', {
+            method: "GET"
+        });
+    }
+
+    function clear(){
+        fetch('http://boncpe.local:3000/clear_dir', {
+            method: "GET"
+        }); 
+    }
+
+    function stop(){
+        fetch('http://boncpe.local:3000/stop', {
             method: "GET"
         });
     }
@@ -45,7 +57,16 @@
         });
     }
 
-    
+    function backhome(){
+        fetch('http://boncpe.local:3000/clear_dir', {
+            method: "GET"
+        })
+        .then(res => {
+            location.href = "http://boncpe.local:3000/";
+        })
+        
+    }
+
 </script>
 
 </html>

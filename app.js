@@ -84,6 +84,7 @@ app.get('/play', (req, res) => {
 });
 
 app.get('/playled', (req, res) => {
+    console.log("fetch /playled")
     res.json({led_status: 1});
 });
 
@@ -91,11 +92,24 @@ app.get('/stopled', (req, res) => {
     res.json({led_status: 0});
 });
 
-app.get('/pause', (req, res) => {
+app.get('/stop', (req, res) => {
     console.log("click pause");
-    const pause_script = exec(' ');
+    const pause_script = exec('sudo killall mpg123');
     res.json({
-        status: 'Pause !'
+        status: 'Stop!'
+    });
+});
+
+app.get('/clear_dir', (req, res) => {
+    const rm_script = exec("sh cleardir.sh");
+    rm_script.stdout.on('data', (data)=>{
+        console.log(data); 
+    });
+    rm_script.stderr.on('data', (data)=>{
+        console.error(data);
+    });
+    res.json({
+        status: 'clear directory'
     });
 });
 
