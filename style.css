@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900');
+
+/* *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+} */
+
+body {
+    /* background-color: whitesmoke; */
+}
+
+h1 {
+    font-size: 60px;
+}
+
+#loader {
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid rgb(236, 234, 234);
+    border-left-color: black;
+    margin: auto;
+    animation-duration: 100s;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#main {
+    text-align: center;
+    background-color: white;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+    width: 60%;
+    position: relative;
+    animation: colorborder 2s infinite;
+    /* position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px; */
+}
+
+@keyframes colorborder {
+    0% {
+        color: black;
+    }
+
+    50% {
+        color: rgb(82, 82, 221);
+    }
+
+    100% {
+        color: black;
+    }
+
+    /* 8% {
+        color: orange;
+    }
+
+    16% {
+        color: yellow;
+    }
+
+    24% {
+        color: yellowgreen;
+    }
+
+    32% {
+        color: green ;
+    }
+
+    40% {
+        color: rgb(0, 128, 128);
+    }
+
+    48% {
+        color: cyan;
+    }
+
+    56% {
+        color: lightblue;
+    }
+
+    64% {
+        color: blue;
+    }
+
+    72% {
+        color: rgb(110, 0, 173);
+    }
+
+    80% {
+        color: mediumorchid;
+    }
+
+    88% {
+        color: rgb(252, 159, 175);
+    }
+
+    100% {
+        color: red;
+    } */
+}
+
+#submitform {
+
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 36px;
+    padding: 0.3px;
+    padding-right: 5px;
+    border-radius: 5px;
+    background-color: rgb(196, 196, 196);
+    width: max-content;
+}
+
+#text1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#text2 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.button {
+    border-radius: 4px;
+    /* background-color: rgb(82, 82, 221); */
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    /* font-size: 28px; */
+    /* padding: 20px; */
+    /* width: 200px; */
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    animation: uploadBlock 2s linear infinite;
+}
+
+@keyframes uploadBlock {
+    0% {
+        background-color: rgb(82, 82, 221);
+    }
+
+    50% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: rgb(82, 82, 221);
+    }
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    /* display: inline-block; */
+}
+
+.btn {
+    border: 2px solid gray;
+    color: rgba(0, 0, 0, 0.644);
+    background-color: rgb(226, 145, 145);
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.upload-btn-wrapper:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.banner{
+    position: absolute;
+    width: 900px;
+    height: 5vw;
+    overflow: hidden;
+    /* display: block; */
+    justify-content: center;
+    align-items: center;
+}
+
+.banner video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 900px;
+    height: 4.81vw;
+    object-fit: cover;
+}
+
+.banner h2{
+    /* position: absolute; */
+    top: 0%;
+    left: 0;
+    /* width: 100%;
+    height: 100%; */
+    background: white;
+    font-size: 4vw;
+    text-align-last: center;
+    /* text-transform: uppercase; */
+    color: #000;
+    /* line-height: 100vh; */
+    mix-blend-mode: screen;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
