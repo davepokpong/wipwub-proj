@@ -8,18 +8,51 @@
 </head>
 
 <body>
-    <form id="submitform" action="/uploadmultiple" enctype="multipart/form-data" method="POST">
-        <input type="file" name="myFiles" multiple>
-        <input type="submit" value="Upload your files" onclick="showUpload()"/>
-    </form>
-    <!-- <button onclick="showUpload()">click</button> -->
-    <p style="display: none;" id="status" >Uploading</p>
+    
+    <video autoplay muted loop id="myVideo">
+        <source src="bg-version1.mp4" type="video/mp4">
+    </video>
+    
+    <div id="main">
+
+        <!-- <div id="text">
+            <h2>WipWup Project</h2>
+            <h1>Smart playing music box.</h1><br>
+            <h3>Put your song here</h3>
+        </div> -->
+        <h2 id="text1">WipWup Project</h2>
+        <div class="banner">
+            <video autoplay muted loop>
+                <source src="bg-version1.mp4" type="video/mp4">
+            </video>
+            <h2>Smart playing music box.</h2>
+        </div>
+        <br><br><br>
+        <h3 id="text2">Put your song here</h3>
+
+        <!-- <form id="submitform" action="/uploadmultiple" enctype="multipart/form-data" method="POST">
+            <input class="button" type="file" name="myFiles" multiple>
+            <input type="submit" value="Upload your files" onclick="showUpload()" />
+        </form> -->
+        <div id="submitform">
+            <input class="button" type="file" name="myFiles" multiple>
+            <input type="submit" value="Upload your files" onclick="showUpload()" />
+        </div>
+        <!-- <input style="margin-bottom: 30px;" ;" type="submit" value="Upload your files" onclick="showUpload()" /> -->
+        <!-- <button onclick="showUpload()">click</button> -->
+
+        <div style="display: none; margin-bottom: 10px;" id="loader"></div>
+        <p style="display: none; margin-bottom: 30px;" id="status">Uploading</p>
+
+    </div>
 </body>
 
 <script>
-    function showUpload(){
+    function showUpload() {
         var upload = document.getElementById('status');
+        var load = document.getElementById('loader');
         upload.style.display = "block";
+        load.style.display = "block";
     }
 </script>
 
