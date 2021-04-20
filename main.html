@@ -30,10 +30,10 @@
         <br><br><br>
         <h3 id="text2">Put your song here</h3>
 
-        <div id="submitform">
+        <form id="submitform" action="/uploadmultiple" enctype="multipart/form-data" method="POST">
             <input class="button" type="file" name="myFiles" multiple>
             <input type="submit" value="Upload your files" onclick="showUpload()" />
-        </div>
+        </form>
 
         <div style="display: none; margin-bottom: 10px;" id="loader"></div>
         <p style="display: none; margin-bottom: 30px;" id="status">Uploading</p>
