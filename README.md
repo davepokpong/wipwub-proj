@@ -46,21 +46,21 @@ libraries ต่างๆที่ใช้
 -------------------------------------
 
 ## Hardware
-อุปกรณ์ที่ใช้:
+อุปกรณ์ที่ใช้: <br>
 1.) Raspberry pi model B+ 1 เครื่อง <br>
-2.) MCU Board 1 ตัว
-3.) Bluetooth Speaker 1 เครื่อง
-4.) MAX7219 based dot matrix module size 32*16 จำนวน 1 อัน
-5.) PCD Board 1 อัน
-6.) Connector 10 ขา 1 อัน
-7.) Connector 5 ขา 1 อัน
-8.) สายเเพ 1 เส้น
-9.) สายจัมเปอร์ 5 ขา 1 เส้น
+2.) MCU Board 1 ตัว<br>
+3.) Bluetooth Speaker 1 เครื่อง<br>
+4.) MAX7219 based dot matrix module size 32*16 จำนวน 1 อัน<br>
+5.) PCD Board 1 อัน<br>
+6.) Connector 10 ขา 1 อัน<br>
+7.) Connector 5 ขา 1 อัน<br>
+8.) สายเเพ 1 เส้น<br>
+9.) สายจัมเปอร์ 5 ขา 1 เส้น<br>
 
-ขั้นตอนสำหรับการใช้งาน Arduino 
-- อัพเดตระบบ
-	sudo apt update
-	sudo apt upgrade
+ขั้นตอนสำหรับการใช้งาน Arduino <br>
+- อัพเดตระบบ<br>
+	sudo apt update<br>
+	sudo apt upgrade<br>
 - ติดตั้ง lxsesson โปรเเกรมจัดการหน้าจอ desktop เเบบกราฟฟิก
 	sudo apt install lxsession
 - เปิดใช้งาน VNC เรียกคำสั่ง
