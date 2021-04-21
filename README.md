@@ -84,12 +84,13 @@ libraries ต่างๆที่ใช้
 	./install.sh
 -สำเร็จสามารถเข้า Arduino ที่ Programming
 
-libraries - libraries สำหรับให้ source code ทำงานได้
-	- Max72xxPanel เเละ MD_MAX72xx-master คือ libraries สำหรับเเสดงไฟบน dot matrix led
-	- arduinoFFT คือ libraries สำหรับคำนวณเกี่ยวกับสัญญาณเเละความถี่ของเสียง
-	- Adafruit_GFX_Librery คือ library สำหรับเปลี่ยนข้อความไว้สำหรับเเสดงบนจอ led
-	- Adafruit_BusIO คือ library สำหรับทำงาน I2C interface
- ledmatrix.ino ในโฟลเดอร์ code_arduino คือ โค้ดที่จะทำสัญญาณความถี่เสียงที่ raspberrypi เล่นอยู่มาคำนวณเเล้วเเสดงเป็นคลื่นการเต้นตามจังหวะบนจอ dot matrix led
+libraries <br><br>
+	- libraries สำหรับให้ source code ทำงานได้<br>
+	- Max72xxPanel เเละ MD_MAX72xx-master คือ libraries สำหรับเเสดงไฟบน dot matrix led<br>
+	- arduinoFFT คือ libraries สำหรับคำนวณเกี่ยวกับสัญญาณเเละความถี่ของเสียง<br>
+	- Adafruit_GFX_Librery คือ library สำหรับเปลี่ยนข้อความไว้สำหรับเเสดงบนจอ led<br>
+	- Adafruit_BusIO คือ library สำหรับทำงาน I2C interface<br>
+ ledmatrix.ino ในโฟลเดอร์ code_arduino คือ โค้ดที่จะทำสัญญาณความถี่เสียงที่ raspberrypi เล่นอยู่มาคำนวณเเล้วเเสดงเป็นคลื่นการเต้นตามจังหวะบนจอ dot matrix led<br>
 
 ขั้นตอนสำหรับต่อ bluetooth กับอุปกรณ์ต่างๆ
 - เริ่มต้นจากอัปเดตระบบ
