@@ -41,7 +41,7 @@ libraries ต่างๆที่ใช้
 
 การทำงาน 
 รับไฟล์ที่ถูก upload จากหน้าเว็ปไปเก็บไว้ใน /uploads ใน rasberry pi และสั่ง raspberry pi 
-ให้รับคำสั่ง mpg123 เพื่อเล่นเพลงที่ถ upload ไปและแสดง led ให้เต้นตามจังหวะเพลง
+ให้รับคำสั่ง mpg123 เพื่อเล่นเพลงที่ถูก upload ไปและแสดง led ให้เต้นตามจังหวะเพลง
 
 -------------------------------------
 
@@ -84,7 +84,7 @@ libraries ต่างๆที่ใช้
 	./install.sh
 -สำเร็จสามารถเข้า Arduino ที่ Programming
 
-libraries <br><br>
+### libraries <br><br>
 	- libraries สำหรับให้ source code ทำงานได้<br>
 	- Max72xxPanel เเละ MD_MAX72xx-master คือ libraries สำหรับเเสดงไฟบน dot matrix led<br>
 	- arduinoFFT คือ libraries สำหรับคำนวณเกี่ยวกับสัญญาณเเละความถี่ของเสียง<br>
