@@ -1,0 +1,26 @@
+-------------------------------------
+
+หน้า main 
+
+ใช้ css ตกแต่ง
+  background
+  animation ต่างๆ 
+
+ใช้ javascript ในการควบคุม
+    button upload ,submit
+
+-------------------------------------
+
+หน้า playlist
+
+ใช้ css ตกแต่ง
+  button play, pause, clear
+  background
+  animation ต่างๆ
+
+ใช้ javascript ในการควบคุมการทำงาน
+  button play, pause, clear
+    การทำงานของ button play, pause, clear
+
+-------------------------------------
+	
