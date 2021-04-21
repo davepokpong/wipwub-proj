@@ -127,4 +127,8 @@ app.get('/percss', (req, res) => {
     res.sendFile(__dirname + '/style.css')
 });
 
+app.get('/submitcss', (req, res) => {
+    res.sendFile(__dirname + '/submitstyle.css')
+})
+
 app.listen(3000, () => console.log('Server started on port 3000'));
