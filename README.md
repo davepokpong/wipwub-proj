@@ -47,7 +47,7 @@ libraries ต่างๆที่ใช้
 
 ## Hardware
 อุปกรณ์ที่ใช้:
-1.) Raspberry pi model B+ 1 เครื่อง
+1.) Raspberry pi model B+ 1 เครื่อง <br>
 2.) MCU Board 1 ตัว
 3.) Bluetooth Speaker 1 เครื่อง
 4.) MAX7219 based dot matrix module size 32*16 จำนวน 1 อัน
