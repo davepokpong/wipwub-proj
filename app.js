@@ -131,4 +131,8 @@ app.get('/submitcss', (req, res) => {
     res.sendFile(__dirname + '/submitstyle.css')
 })
 
+app.get('/bgvideo', (req, res) => {
+    res.sendFile(__dirname + '/bg-version2.3.mp4')
+})
+
 app.listen(3000, () => console.log('Server started on port 3000'));

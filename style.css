@@ -195,7 +195,8 @@ h1 {
 .banner{
     position: absolute;
     width: auto;
-    margin-left: 10%;
+    margin-top: 10px;
+    margin-left: 26%;
     height: 5vw;
     overflow: hidden;
     /* display: inline-block; */
