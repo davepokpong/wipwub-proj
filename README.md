@@ -33,13 +33,13 @@
 -------------------------------------
 
 ## Backend
-libraries ต่างๆที่ใช้
+### libraries ต่างๆที่ใช้
 - multer ใช้ส่งไฟล์ระหว่าง server
 - body-parser จัดไฟล์
 - express สร้าง server 
 - child_process ส่งคำสั่งให้ rasberry pi ทำงาน
 
-การทำงาน 
+การทำงาน: 
 รับไฟล์ที่ถูก upload จากหน้าเว็ปไปเก็บไว้ใน /uploads ใน rasberry pi และสั่ง raspberry pi 
 ให้รับคำสั่ง mpg123 เพื่อเล่นเพลงที่ถูก upload ไปและแสดง led ให้เต้นตามจังหวะเพลง
 
