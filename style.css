@@ -6,10 +6,6 @@
     font-family: 'Poppins', sans-serif;
 } */
 
-body {
-    /* background-color: whitesmoke; */
-}
-
 h1 {
     font-size: 60px;
 }
@@ -134,7 +130,7 @@ h1 {
 }
 
 #text2 {
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -198,15 +194,17 @@ h1 {
 
 .banner{
     position: absolute;
-    width: 900px;
+    width: auto;
+    margin-left: 10%;
     height: 5vw;
     overflow: hidden;
-    /* display: block; */
-    justify-content: center;
+    /* display: inline-block; */
+    /* justify-content: center; */
     align-items: center;
 }
 
 .banner video{
+    margin: 0 auto;
     position: absolute;
     top: 0;
     left: 0;
