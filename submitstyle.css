@@ -1,0 +1,40 @@
+#main {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    margin-top: 11%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+    width: 60%;
+    position: relative;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+button {
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+    margin-inline-start: 5px;
+    width: 8%;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+} 
+  
