@@ -94,26 +94,26 @@
 
 ขั้นตอนสำหรับต่อ bluetooth กับอุปกรณ์ต่างๆ
 - เริ่มต้นจากอัปเดตระบบ
-	sudo apt update
-	sudo apt upgrade
+	`sudo apt update`
+	`sudo apt upgrade`
 - Install PulseAudio Bluetooth profile
-	sudo apt install pulseaudio-module-bluetooth
+	`sudo apt install pulseaudio-module-bluetooth`
 - Install Bluez เเละ Blueman
-	sudo apt install bluez
-	sudo apt install blueman
+	`sudo apt install bluez`
+	`sudo apt install blueman`
 - เพิ่ม user pi เข้าไปในกลุ่ม bluetooth
-	sudo usermod -a -G bluetooth pi
+	`sudo usermod -a -G bluetooth pi`
 - Reboot ระบบ
 - เริ่มต้นเปิดระบบ PulseAudio
-	systemctl --user start pulseaudio
+	`systemctl --user start pulseaudio`
 - เข้าใช้คำสั่งสำหรับ bluetooth
-	bluetoothctl
+	`bluetoothctl`
 - ค้นหา ip ของอุปกรณ์ที่ต้องการเชื่อมต่อ
-	scan on
+	`scan on`
 - หยุดการค้นหา
-	scan off
+	`scan off`
 - เชื่อมต่อ ip อุปกรณ์
-	connect XX:XX:XX:XX:XX:XX
+	`connect XX:XX:XX:XX:XX:XX`
 - เชื่อมต่อสำเร็จ ถ้าต้องการทำงานคำสั่งต่อให้ออกจากระบบ bluetooth
-	exit
+	`exit`
 -------------------------------------
